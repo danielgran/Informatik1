@@ -1,0 +1,1 @@
+CMakeLists.txt not found in D:\Dateien\OneDrive\TH\Semester 2\Informatik 1 Praktikum\Aufgaben Select CMakeLists.txt

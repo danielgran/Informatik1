@@ -27,20 +27,19 @@ int main( void )
     {
         printf("Ungültige Eingabe!");
         return 0;
-    }
-
-
-    if ((input1 % input2) == 0)
+    } else 
     {
-        dividable = true;
-    }
+        if ((input1 % input2) == 0)
+        {
+            dividable = true;
+        }
 
-    printf("---> %d ist durch %d ", input1, input2);
-    if(!dividable)
-    {
-        printf("nicht ");
+        printf("---> %d ist durch %d ", input1, input2);
+        if(!dividable)
+        {
+            printf("nicht ");
+        }
+        printf("teilbar!");
     }
-    printf("teilbar!");
-
     return 0;
 }
