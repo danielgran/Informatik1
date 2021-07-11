@@ -11,16 +11,18 @@
 int main(void)
 {
     int run = true;
-    unsigned int zahl, outzahl, quersumme = 0;
+    int eingabe, quersumme = 0;
 
     printf("Dieses Programm berechnet die Quersumme einer eingegebenen positiven Zahl!\n");
-    printf("Zahl bitte (positiv): \n");
+    printf("Drücken sie q oder Q zum verlassen des Programms!\n");
 
     while (run)
     {
-        int inputok = scanf("%d", &zahl);
+        fflush(stdin);
+        printf("Zahl bitte: ");
+        int inputok = scanf("%d", &eingabe);
 
-        if (!inputok && zahl > 0)
+        if (!inputok || eingabe < 0)
         {
             char quit = getchar();
             if (quit == 'q' || quit == 'Q')
@@ -28,20 +30,17 @@ int main(void)
                 run = false;
             }
             printf("Eingabe muss Positiv und valide sein!\n");
-            printf("Zahl bitte: ");
             continue;
         }
-
-    outzahl = zahl;
-    quersumme += zahl % 10;
-
-    while(zahl = zahl/10)
-        quersumme += zahl % 10;
+        int hilf = eingabe;
+        while(hilf > 0)
+        {
+            quersumme += hilf%10;
+            hilf /= 10;
+        }
         
-        printf("Quersumme zu %d ist: %u", outzahl, quersumme);
-
-        run = false;
         
+        printf("Quersumme zu %d ist: %d\n\n", eingabe, quersumme);
     }
 
     return 0;

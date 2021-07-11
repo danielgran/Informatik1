@@ -1,0 +1,2 @@
+/Users/danielgran/OneDrive/TH/Semester 2/Informatik 1 Praktikum/Aufgaben/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/danielgran/OneDrive/TH/Semester 2/Informatik 1 Praktikum/Aufgaben/cmake-build-debug/CMakeFiles/edit_cache.dir
